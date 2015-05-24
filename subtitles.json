@@ -2,8 +2,8 @@ subtitles = [
 	{"text": "Hello darkness, my old friend,", "time":0},
 	{"text": "I've come to talk with you again", "time":3},
 	{"text": "Because a vision softly creeping", "time":6},
-	{"text": "Left its seeds while I was sleeping", "time":10},
-	{"text": "And the vision that was planted in my brain", "time":14},
-	{"text": "Still remains", "time":18},
-	{"text": "Within the sound of silence.", "time":22}
+	{"text": "Left its seeds while I was sleeping", "time":9},
+	{"text": "And the vision that was planted in my brain", "time":12},
+	{"text": "Still remains", "time":15},
+	{"text": "Within the sound of silence.", "time":18}
 ]

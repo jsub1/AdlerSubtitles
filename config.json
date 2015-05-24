@@ -1,0 +1,7 @@
+textColor = "red";
+textSize = "250%";
+backgroundColor = "black";
+font = "georgia, serif"
+absoluteTiming = true;
+tagSubtitles = ["<p>","</p>"];
+msPerTimeUnit = 1000;

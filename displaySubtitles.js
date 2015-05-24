@@ -6,7 +6,15 @@ function startSubtitles(){
 	waitTime = 0;
 	j = 0;
 	while (i < subtitles.length){
-		setTimeout(function(){text.innerHTML = "<p>".concat(subtitles[j].text,"</p>");j++;},subtitles[i].time*1000);
+		if (absoluteTiming){
+			waitTime = subtitles[i].time;
+		}
+		else{
+			if (i > 0){
+				waitTime += subtitles[i-1].time;
+			}
+		}
+		setTimeout(function(){text.innerHTML = tagSubtitles[0].concat(subtitles[j].text,tagSubtitles[1]);j++;},waitTime*msPerTimeUnit);
 		i++;
 	}
 }
