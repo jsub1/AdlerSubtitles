@@ -1,6 +1,8 @@
 textColor = "red";
 textSize = "250%";
 backgroundColor = "black";
+initalMessage = "<p>...Waiting...</p>";
+initalDelay = 0;
 font = "georgia, serif"
 absoluteTiming = true;
 tagSubtitles = ["<p>","</p>"];

@@ -1,9 +1,9 @@
 function startSubtitles(){
 	text = document.getElementById("text");
 	originalHTML = text.innerHTML;
-	text.innerHTML = subtitles[0].text;
+	text.innerHTML = initalMessage;
 	i = 0;
-	waitTime = 0;
+	waitTime = initalDelay;
 	j = 0;
 	while (i < subtitles.length){
 		if (absoluteTiming){
