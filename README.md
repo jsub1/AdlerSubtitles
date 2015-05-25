@@ -1,4 +1,4 @@
-This project is designed to display subtitles at predeteremined intervals for BYOD (Bring Your Own Device) captioning. There is a JSON file that is an array of subtitle that have both a text and time properties. The script of the Adler Planetarium's Cosmic Wonder is provided as an example in CosmicWonder.json. 
+This project is designed to display subtitles at predeteremined intervals for BYOD (Bring Your Own Device) captioning. There is a JSON file that is an array of subtitles that have both a text and time properties. The script of the Adler Planetarium's Cosmic Wonder is provided as an example in CosmicWonder.json. Settings can be modified in the config,json file.
 
 config.json options:
 
