@@ -6,4 +6,4 @@ initalMessage = "<p>...Waiting...</p>";
 initalDelay = 0;
 absoluteTiming = true;
 tagSubtitles = ["<p>","</p>"];
-msPerTimeUnit = 100;
+msPerTimeUnit = 1000;
