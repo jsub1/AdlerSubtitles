@@ -1,7 +1,6 @@
 function startSubtitles(){
 	text = document.getElementById("text");
-	originalHTML = text.innerHTML;
-	text.innerHTML = subtitles[0].text;
+	originalHTML = text.innerHTML = "";
 	i = 0;
 	waitTime = 0;
 	j = 0;
