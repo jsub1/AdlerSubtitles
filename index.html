@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type = "text/css" href = "style.css" />
+<title>Subtitles</title>
+<script type="text/javascript" src="subtitles.json"></script>
+<script type="text/javascript" src="config.json"></script>
+<script type="text/javascript" src="displaySubtitles.js"></script>
+</head>
+<body>
+<div id = "text">
+<div id = "buttonPreamble">
+</div>
+<p>
+<button id = "startButton" type = "button" onclick = "startSubtitles()">Start</button>
+</p>
+</div>
+<div id = "buttonPostamble">
+</div>
+<script>
+document.getElementById("text").style.color = textColor;
+document.getElementById("text").style.fontSize = textSize;
+document.body.style.background = backgroundColor;
+document.getElementById("text").style.fontFamily = font;
+</script>
+</body>
+</html>

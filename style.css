@@ -1,0 +1,31 @@
+h1, h2, h3 {
+	font-family:arial, sans-serif;
+	font-weight: normal;
+	letter-spacing:0.07em;
+	margin:20px;
+	color:orangered;
+	font-size:200%;
+}
+
+p {
+	letter-spacing:0.07em; 
+	margin:20px;
+}
+	
+button {
+	text-decoration:none;
+	letter-spacing:0.07em;
+	color: black;
+	font-weight:bold;
+	font-family: arial, sans-serif;
+	padding:1.2em;
+	display: block;
+	width: 10em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	background:red;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	font-size: 100%;
+}
