@@ -7,3 +7,6 @@ initalDelay = 0;
 absoluteTiming = true;
 tagSubtitles = ["<p>","</p>"];
 msPerTimeUnit = 1000;
+subtitleWindow = 24*60;
+statusFile = "backend/startSubtitles.txt";
+requestTimeout = 500;

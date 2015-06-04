@@ -7,6 +7,25 @@
 <script type="text/javascript" src="CosmicWonder.json"></script>
 <script type="text/javascript" src="config.json"></script>
 <script type="text/javascript" src="displaySubtitles.js"></script>
+<script>
+request = new XMLHttpRequest();
+request.onreadystatechange = function(){
+	if (request.readyState == 4 && request.status == 200){
+		startSub = parseFloat(request.responseText);
+		if (new Date().getTime() - startSub > subtitleWindow*msPerTimeUnit){
+			setTimeout(function(){requestStatus();},requestTimeout);
+		}
+		else{
+			startSubtitles(parseFloat(startSub));
+		}
+	}
+}
+function requestStatus(){
+	request.open("POST",statusFile,true);
+	request.send();
+	console.log("a");
+}
+</script>
 </head>
 <body>
 <div id = "text">
@@ -25,17 +44,15 @@
 
 <div id = "buttonPreamble">
 </div>
-<p>
-<button id = "startButton" type = "button" onclick = "startSubtitles()">Start Subtitling</button>
-</p>
-</div>
 <div id = "buttonPostamble">
+</div>
 </div>
 <script>
 document.getElementById("text").style.color = textColor;
 document.getElementById("text").style.fontSize = textSize;
 document.body.style.background = backgroundColor;
 document.getElementById("text").style.fontFamily = font;
+requestStatus();
 </script>
 </body>
 </html>

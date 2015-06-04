@@ -12,7 +12,7 @@ p {
 	margin:20px;
 }
 	
-button {
+input.Button {
 	text-decoration:none;
 	letter-spacing:0.07em;
 	color: black;
