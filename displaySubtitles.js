@@ -1,21 +1,32 @@
+j = 0;
+timestamps = [];
 function startSubtitles(startTime){
-	console.log(startTime);
 	text = document.getElementById("text");
 	originalHTML = text.innerHTML = initalMessage;
 	i = 0;
-	waitTime = initalDelay;
-	j = 0;
-	offset = new Date().getTime() - startTime;
+	timestamps[0] = startTime + initalDelay*msPerTimeUnit
 	while (i < subtitles.length){
 		if (absoluteTiming){
-			waitTime = subtitles[i].time;
+			timestamps[i] = startTime+subtitles[i].time*msPerTimeUnit;
 		}
 		else{
 			if (i > 0){
-				waitTime += subtitles[i-1].time;
+				timestamps[i] += subtitles[i-1].time;
 			}
 		}
-		setTimeout(function(){text.innerHTML = tagSubtitles[0].concat(subtitles[j].text,tagSubtitles[1]);j++;},Math.max(waitTime*msPerTimeUnit-offset,1));
 		i++;
 	}
+	interalID = setInterval(checkTime,1);
 }
+function checkTime(){
+	console.log(j);
+		if (new Date().getTime()>timestamps[j]){
+			text.innerHTML = subtitles[j].text;
+			j++;
+			console.log(j);
+		}
+		if (j == timestamps.length)
+		{
+			clearInterval(intervalID);
+		}
+	}
