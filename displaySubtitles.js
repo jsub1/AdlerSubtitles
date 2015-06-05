@@ -1,6 +1,7 @@
 j = 0;
 timestamps = [];
-function startSubtitles(startTime){
+function startSubtitles(){
+	startTime = new Date().getTime();
 	text = document.getElementById("text");
 	originalHTML = text.innerHTML = initalMessage;
 	i = 0;
