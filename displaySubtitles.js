@@ -12,7 +12,7 @@ function startSubtitles(){
 		}
 		else{
 			if (i > 0){
-				timestamps[i] + timestamps[i-1]+subtitles[i-1].time*msPerTimeUnit;
+				timestamps[i] = timestamps[i-1]+subtitles[i-1].time*msPerTimeUnit;
 			}
 		}
 		i++;
