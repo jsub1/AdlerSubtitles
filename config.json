@@ -9,4 +9,4 @@ tagSubtitles = ["<p>","</p>"];
 msPerTimeUnit = 1000;
 subtitleWindow = 24*60;
 statusFile = "backend/startSubtitles.txt";
-requestTimeout = 500;
+requestTimeout = 50;
