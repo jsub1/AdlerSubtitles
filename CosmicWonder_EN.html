@@ -16,7 +16,8 @@ request.onreadystatechange = function(){
 			setTimeout(function(){requestStatus();},requestTimeout);
 		}
 		else{
-			startSubtitles();
+			localStorage["TimeStamp"]= new Date().getTime()
+			startSubtitles(new Date().getTime());
 		}
 	}
 }
@@ -24,6 +25,7 @@ function requestStatus(){
 	request.open("POST",statusFile,true);
 	request.send();
 }
+
 </script>
 </head>
 <body>
@@ -51,6 +53,9 @@ document.getElementById("text").style.color = textColor;
 document.getElementById("text").style.fontSize = textSize;
 document.body.style.background = backgroundColor;
 document.getElementById("text").style.fontFamily = font;
+if (localStorage["TimeStamp"] && new Date().getTime()-parseInt(localStorage["TimeStamp"]) < showDuration*msPerTimeUnit){
+	startSubtitles(parseInt(localStorage["TimeStamp"]));
+}
 requestStatus();
 </script>
 </body>

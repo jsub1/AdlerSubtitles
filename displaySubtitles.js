@@ -1,9 +1,9 @@
 j = 0;
 timestamps = [];
-function startSubtitles(){
-	startTime = new Date().getTime()
-	text = document.getElementById("text");
-	originalHTML = text.innerHTML = initalMessage;
+function startSubtitles(startTime){
+	text = document.getElementById("text")
+	originalHTML = text.innerHTML
+	text.innerHTML = initalMessage;
 	i = 0;
 	timestamps[0] = startTime + initalDelay*msPerTimeUnit
 	while (i < subtitles.length){
@@ -20,11 +20,13 @@ function startSubtitles(){
 	interalID = setInterval(checkTime,1);
 }
 function checkTime(){
-	console.log(j);
-		if (new Date().getTime()>timestamps[j]){
+		var now = new Date();
+		if (now.getTime()>timestamps[j]){
 			text.innerHTML = subtitles[j].text;
 			j++;
-			console.log(j);
+		}
+		else if (timestamps[j] - now.getTime() < transitionDuration * msPerTimeUnit){
+			text.innerHTML = transitionHTML;
 		}
 		if (j == timestamps.length)
 		{
